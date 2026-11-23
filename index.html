@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lagunas de Magallanes vistas desde el espacio (2017-2026)</title>
+<meta name="description" content="Visor de imágenes satelitales Sentinel-2 que muestra cómo cambiaron el agua, el sedimento y la vegetación en cuatro lagunas de Magallanes entre 2017 y 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="portada">
+  <div class="contenedor">
+    <p class="antetitulo">Magallanes, Chile · Temporadas 2017-2018 a 2025-2026</p>
+    <h1>Lagunas de Magallanes vistas desde el espacio</h1>
+    <p class="bajada">Nueve veranos de imágenes satelitales muestran cómo cuatro lagunas de la estepa magallánica se secaron, se llenaron y cambiaron de vegetación durante la sequía de 2021 a 2023. Elige una laguna, mueve el selector de temporada y mira cómo cambia el paisaje.</p>
+    <nav class="indice" aria-label="Lagunas">
+      <a href="#blanca"><span class="num">1</span><span>Laguna Blanca</span><span class="detalle">Avance y retroceso del sedimento</span></a>
+      <a href="#plantines"><span class="num">1.2</span><span>Zona de plantación</span><span class="detalle">Vega, sequía y plantines de Salicornia</span></a>
+      <a href="#lospalos"><span class="num">2</span><span>Laguna Los Palos</span><span class="detalle">La laguna se achica y el fondo reverdece</span></a>
+      <a href="#ana"><span class="num">3</span><span>Laguna Ana</span><span class="detalle">Una laguna de Pali Aike casi seca</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="guia contenedor" aria-labelledby="guia-titulo">
+  <h2 id="guia-titulo">Cómo leer los mapas</h2>
+  <div class="guia-grilla">
+    <div>
+      <h3>Agua y suelo</h3>
+      <p>El azul es agua. El resto de los colores indica cuánto suelo desnudo hay: verde donde hay plantas, amarillo y café donde el suelo o el sedimento del fondo de la laguna quedaron a la vista. Se calcula con dos índices, MNDWI para el agua y BSI para el suelo desnudo.</p>
+    </div>
+    <div>
+      <h3>Vegetación</h3>
+      <p>Muestra el verdor de las plantas con el índice NDVI. Los tonos claros son suelo o agua sin vegetación y los verdes oscuros, vegetación densa y sana, como las vegas.</p>
+    </div>
+    <div>
+      <h3>Temporadas</h3>
+      <p>Cada mapa combina las imágenes despejadas de un verano, de noviembre a marzo. La temporada 2017-2018 está incompleta porque el satélite aún no procesaba toda la zona, por eso parte del mapa aparece vacía.</p>
+    </div>
+  </div>
+</section>
+
+<section id="blanca" class="caso" data-caso="blanca">
+  <div class="contenedor">
+    <p class="caso-num">Caso 1</p>
+    <h2>Laguna Blanca</h2>
+    <p class="caso-sub">Toda la cuenca, unas 44.870 ha · Comuna de Laguna Blanca</p>
+    <div class="relato">
+      <p>Laguna Blanca es una laguna somera donde la mayor parte del fondo no tiene agua permanente: es una gran planicie de sedimento arcilloso y salino que se inunda solo en parte. Durante la sequía, el sedimento expuesto creció un 32%, de 12.404 ha en 2019-2020 a 16.351 ha en 2022-2023, y luego retrocedió casi hasta el nivel inicial.</p>
+      <p>Las vegas fueron las más afectadas: pasaron de 14.034 ha a 1.927 ha en la peor temporada, pero se recuperaron a 13.266 ha en un solo verano. El borde noreste, donde está la zona de plantación, es el sector que más cambia.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><span class="valor">+32%</span><span class="rotulo">sedimento expuesto entre 2019-2020 y 2022-2023</span></div>
+      <div class="cifra"><span class="valor">192 ha</span><span class="rotulo">de agua en 2022-2023, el mínimo de la serie</span></div>
+      <div class="cifra"><span class="valor">1 verano</span><span class="rotulo">bastó para que las vegas se recuperaran</span></div>
+    </div>
+  </div>
+  <div class="contenedor visor-bloque"></div>
+</section>
+
+<section id="plantines" class="caso" data-caso="plantines">
+  <div class="contenedor">
+    <p class="caso-num">Caso 1.2</p>
+    <h2>Zona de plantación de Salicornia</h2>
+    <p class="caso-sub">Sector noreste de Laguna Blanca, unas 148 ha</p>
+    <div class="relato">
+      <p>En este sector se plantaron en 2024 plantines de Salicornia magellanica, una planta capaz de crecer sobre sedimento salino, en cuatro núcleos. Antes de eso, entre 2018 y 2022, aquí dominaba una vega verde y estable. En los veranos 2022-2023 y 2023-2024 la vegetación casi desapareció y el suelo desnudo llegó a cubrir un 36% del área.</p>
+      <p>Desde 2023-2024 apareció además una laguna nueva en el sector sur, justo donde estaba la vega más verde, que llegó a 9,6 ha. La vegetación se está recuperando, aunque las zonas más verdes de antes aún no vuelven. El satélite capta bien estos cambios del entorno, pero cada plantín es mucho más chico que un píxel, por lo que su crecimiento se sigue mejor en terreno.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><span class="valor">36%</span><span class="rotulo">del área con suelo desnudo en 2022-2023</span></div>
+      <div class="cifra"><span class="valor">9,6 ha</span><span class="rotulo">de agua nueva en 2023-2024, donde antes había vega</span></div>
+      <div class="cifra"><span class="valor">2024</span><span class="rotulo">año de plantación de los cuatro núcleos</span></div>
+    </div>
+  </div>
+  <div class="contenedor visor-bloque"></div>
+</section>
+
+<section id="lospalos" class="caso" data-caso="lospalos">
+  <div class="contenedor">
+    <p class="caso-num">Caso 2</p>
+    <h2>Laguna Los Palos</h2>
+    <p class="caso-sub">Laguna y entorno, unas 1.370 ha · Unos 58 km al norte de Punta Arenas</p>
+    <div class="relato">
+      <p>Laguna Los Palos es una laguna salobre y uno de los tres sitios de Chile donde se ha confirmado la reproducción del chorlo de Magallanes, un ave cuya principal amenaza es justamente el secado de estas lagunas. Entre 2018-2019 y 2025-2026 perdió cerca de dos tercios de su espejo de agua, con una caída brusca en 2023-2024, cuando bajó a 74 ha.</p>
+      <p>Al retirarse el agua, las plantas empezaron a colonizar el fondo expuesto: la parte del antiguo lecho con vegetación pasó de unas 2 ha a 137 ha, más de un tercio de la cubeta. Es un caso activo de colonización de un suelo nuevo por la vegetación.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><span class="valor">384 a 121 ha</span><span class="rotulo">de agua entre 2018-2019 y 2025-2026</span></div>
+      <div class="cifra"><span class="valor">137 ha</span><span class="rotulo">del antiguo fondo ya tienen vegetación</span></div>
+      <div class="cifra"><span class="valor">1 de 3</span><span class="rotulo">sitios de Chile con nidos confirmados de chorlo de Magallanes</span></div>
+    </div>
+  </div>
+  <div class="contenedor visor-bloque"></div>
+</section>
+
+<section id="ana" class="caso" data-caso="ana">
+  <div class="contenedor">
+    <p class="caso-num">Caso 3</p>
+    <h2>Laguna Ana</h2>
+    <p class="caso-sub">Parque Nacional Pali Aike, unas 591 ha · Comuna de San Gregorio</p>
+    <div class="relato">
+      <p>Laguna Ana es un humedal somero rodeado de estepa, conos volcánicos y coladas de lava. Tuvo 70 ha de agua en 2018-2019 y alcanzó su máximo en 2019-2020, el verano más lluvioso de la serie, con 106 ha. Desde entonces perdió el 92% de su agua y en 2025-2026 quedaban solo 9 ha.</p>
+      <p>Desde 2021 la lluvia anual es un 29% menor que en los años anteriores y 2025 tuvo 81 días de viento fuerte, el máximo registrado. Casi todo el fondo quedó como sedimento seco, y hacia el sureste crece una franja sin vegetación, que podría ser sedimento arrastrado por el viento.</p>
+    </div>
+    <div class="cifras">
+      <div class="cifra"><span class="valor">92%</span><span class="rotulo">del agua perdida entre 2019-2020 y 2025-2026</span></div>
+      <div class="cifra"><span class="valor">124 ha</span><span class="rotulo">de fondo seco en 2025-2026, casi toda la cubeta</span></div>
+      <div class="cifra"><span class="valor">81 días</span><span class="rotulo">de viento fuerte en 2025, el máximo de la serie</span></div>
+    </div>
+  </div>
+  <div class="contenedor visor-bloque"></div>
+</section>
+
+<section class="contenedor metodo" aria-labelledby="metodo-titulo">
+  <h2 id="metodo-titulo">Sobre los datos</h2>
+  <div class="metodo-grilla">
+    <div>
+      <h3>Imágenes satelitales</h3>
+      <p>Imágenes Sentinel-2 del programa Copernicus de la Agencia Espacial Europea, procesadas en Google Earth Engine. Se usaron solo las partes despejadas de cada imagen y se combinaron por verano, de noviembre a marzo. Los mapas de vegetación tienen píxeles de 10 m y los de agua y suelo, de 20 m.</p>
+    </div>
+    <div>
+      <h3>Clima</h3>
+      <p>Lluvia, evaporación y viento provienen del reanálisis ERA5-Land, un modelo climático con celdas de unos 11 km. Sirve para comparar un verano con otro más que como medición exacta del sitio. Los días de viento fuerte son aquellos con viento medio sobre 8 m/s.</p>
+    </div>
+    <div>
+      <h3>Informe completo</h3>
+      <p>Los métodos, los resultados detallados, las hipótesis y las limitaciones de cada caso están en el informe técnico.</p>
+      <p><a class="boton" href="informe/Casos_de_Estudio_Lagunas_Magallanes_2017-2026.pdf">Descargar informe (PDF)</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p>Proyecto 503780-25, INIA, convenio de colaboración con la Municipalidad de Laguna Blanca. Análisis: Javiera de la Fuente, 2026.</p>
+    <p>Contiene datos modificados de Copernicus Sentinel-2 (2017-2026) y del reanálisis ERA5-Land (ECMWF). Imagen de fondo de los mapas: Esri World Imagery.</p>
+  </div>
+</footer>
+
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
